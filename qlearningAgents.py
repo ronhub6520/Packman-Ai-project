@@ -63,17 +63,6 @@ class QLearningAgent(ReinforcementAgent):
         try:
             with open(file_name, 'rb') as f:
                 self.qvalues = pickle.load(f)
-                # print("Type of data:", type(self.qvalues))
-                # if isinstance(self.qvalues , dict):
-                #     print("Contents of the dictionary:")
-                #     for key, value in self.qvalues .items():
-                #         print(f"Key: {key}, Value: {value}")
-                # elif isinstance(self.qvalues , list):
-                #     print("Contents of the list:")
-                #     for item in self.qvalues :
-                #         print(item)
-                # else:
-                #     print("Data:", self.qvalues )
             print(f"Q-table loaded from {file_name}")
         except FileNotFoundError:
             print(
